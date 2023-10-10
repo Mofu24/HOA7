@@ -1157,3 +1157,410 @@ The following NEW packages will be installed:
 2023-10-09 10:55:40,708 p=4418 u=flores n=ansible | PLAY RECAP *********************************************************************
 2023-10-09 10:55:40,708 p=4418 u=flores n=ansible | 192.168.164.10             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-10-09 10:55:40,708 p=4418 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-09 11:17:53,708 p=4633 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 11:17:53,718 p=4633 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 11:17:55,727 p=4633 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:17:55,740 p=4633 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 11:17:57,965 p=4633 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:17:57,973 p=4633 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, mode=493, owner=root, group=root] ***
+2023-10-09 11:17:58,501 p=4633 u=flores n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-10-09 11:17:58,502 p=4633 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Could not find or access 'https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip'\nSearched in:\n\t/home/flores/HOA7/files/https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip\n\t/home/flores/HOA7/https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip\n\t/home/flores/HOA7/files/https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip\n\t/home/flores/HOA7/https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-10-09 11:17:58,504 p=4633 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 11:17:58,504 p=4633 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 11:20:37,968 p=4684 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 11:20:37,978 p=4684 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 11:20:40,047 p=4684 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:20:40,059 p=4684 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 11:20:42,176 p=4684 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:20:42,185 p=4684 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 11:40:37,479 p=4684 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 11:40:37,481 p=4684 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 11:40:37,481 p=4684 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 11:41:26,510 p=4802 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 11:41:26,528 p=4802 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 11:41:34,434 p=4802 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:41:34,444 p=4802 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 11:41:36,497 p=4802 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:41:36,503 p=4802 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 11:53:39,619 p=4802 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 11:53:39,620 p=4802 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 11:53:39,621 p=4802 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 11:55:50,322 p=4903 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 11:55:50,334 p=4903 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 11:55:52,159 p=4903 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:55:52,171 p=4903 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 11:55:54,064 p=4903 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:55:54,072 p=4903 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 11:57:45,548 p=4903 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 11:57:45,549 p=4903 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 11:57:45,550 p=4903 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 11:59:30,872 p=4950 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 11:59:30,881 p=4950 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 11:59:50,173 p=4950 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:59:50,183 p=4950 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 11:59:52,222 p=4950 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 11:59:52,228 p=4950 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:06:04,350 p=4950 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 12:06:04,351 p=4950 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:06:04,352 p=4950 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:06:12,020 p=5024 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:06:12,030 p=5024 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:06:23,974 p=5024 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:06:23,987 p=5024 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:06:26,046 p=5024 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:06:26,052 p=5024 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:12:10,010 p=5024 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 12:12:10,012 p=5024 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:12:10,012 p=5024 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:12:29,737 p=5109 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:12:29,755 p=5109 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:12:55,353 p=5109 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"msg": "Incorrect sudo password"}
+2023-10-09 12:12:55,354 p=5109 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:12:55,354 p=5109 u=flores n=ansible | 192.168.164.6              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:13:15,228 p=5134 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:13:15,239 p=5134 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:13:20,658 p=5134 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"msg": "Incorrect sudo password"}
+2023-10-09 12:13:20,660 p=5134 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:13:20,660 p=5134 u=flores n=ansible | 192.168.164.6              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:13:51,164 p=5161 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:13:51,173 p=5161 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:14:06,413 p=5161 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"msg": "Incorrect sudo password"}
+2023-10-09 12:14:06,414 p=5161 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:14:06,415 p=5161 u=flores n=ansible | 192.168.164.6              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:14:24,140 p=5184 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:14:24,149 p=5184 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:14:36,197 p=5184 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:14:36,210 p=5184 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:14:38,222 p=5184 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:14:38,230 p=5184 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:24:23,899 p=5184 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 12:24:23,900 p=5184 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:24:23,901 p=5184 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:25:10,155 p=5360 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:25:10,171 p=5360 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:25:32,041 p=5360 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:25:32,054 p=5360 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:25:34,254 p=5360 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:25:34,260 p=5360 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:31:19,200 p=5360 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 12:31:19,201 p=5360 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:31:19,201 p=5360 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:32:35,500 p=5433 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:32:35,510 p=5433 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:32:41,854 p=5433 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"msg": "Incorrect sudo password"}
+2023-10-09 12:32:41,857 p=5433 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:32:41,857 p=5433 u=flores n=ansible | 192.168.164.6              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:32:52,677 p=5456 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:32:52,686 p=5456 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:32:54,796 p=5456 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:32:54,809 p=5456 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:32:56,692 p=5456 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:32:56,697 p=5456 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:35:42,256 p=5456 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"changed": false, "msg": "Failure downloading https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, The read operation timed out"}
+2023-10-09 12:35:42,257 p=5456 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:35:42,258 p=5456 u=flores n=ansible | 192.168.164.6              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:42:35,257 p=5536 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:42:35,276 p=5536 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:42:37,461 p=5536 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:42:37,471 p=5536 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:42:39,552 p=5536 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:42:39,558 p=5536 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:50:36,827 p=5536 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-09 12:50:52,423 p=5616 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:50:52,435 p=5616 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:50:54,538 p=5616 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:50:54,554 p=5616 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:50:56,595 p=5616 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:50:56,603 p=5616 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:50:58,765 p=5616 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-09 12:51:04,570 p=5653 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:51:04,579 p=5653 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:51:11,798 p=5653 u=flores n=ansible | fatal: [192.168.164.6]: FAILED! => {"msg": "Incorrect sudo password"}
+2023-10-09 12:51:11,799 p=5653 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:51:11,799 p=5653 u=flores n=ansible | 192.168.164.6              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:51:56,994 p=5697 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:51:57,005 p=5697 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:52:03,070 p=5697 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:52:03,079 p=5697 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:52:05,165 p=5697 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:52:05,171 p=5697 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:52:25,307 p=5697 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-09 12:52:30,009 p=5739 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 12:52:30,026 p=5739 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:52:32,026 p=5739 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:52:32,047 p=5739 u=flores n=ansible | TASK [install unzip name=unzip] ************************************************
+2023-10-09 12:52:34,014 p=5739 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:52:34,021 p=5739 u=flores n=ansible | TASK [install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 12:52:50,585 p=5739 u=flores n=ansible | .f....g..?? terraform
+
+2023-10-09 12:52:50,585 p=5739 u=flores n=ansible | changed: [192.168.164.6]
+2023-10-09 12:52:50,609 p=5739 u=flores n=ansible | PLAY [web_servers] *************************************************************
+2023-10-09 12:52:50,624 p=5739 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 12:52:52,113 p=5739 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:53:10,123 p=5739 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 12:53:10,138 p=5739 u=flores n=ansible | TASK [copy default html file for site src=default_site.html, dest=/var/www/html/index.html, owner=root, group=root, mode=420] ***
+2023-10-09 12:53:12,320 p=5739 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 12:53:14,111 p=5739 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 12:53:14,124 p=5739 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-09 12:53:14,124 p=5739 u=flores n=ansible | 192.168.164.10             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-09 12:53:14,124 p=5739 u=flores n=ansible | 192.168.164.6              : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-09 13:16:51,478 p=6065 u=flores n=ansible | ERROR! conflicting action statements: hosts, roles
+
+The error appears to be in '/home/flores/HOA7/roles/workstations/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- hosts: workstations
+  ^ here
+
+2023-10-09 13:21:50,560 p=6204 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-09 13:21:50,571 p=6204 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:21:54,776 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:22:03,029 p=6204 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:22:10,914 p=6204 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:22:10,921 p=6204 u=flores n=ansible | TASK [update repository index (CentOS) update_cache=True] **********************
+2023-10-09 13:22:10,944 p=6204 u=flores n=ansible | skipping: [192.168.164.6]
+2023-10-09 13:22:10,971 p=6204 u=flores n=ansible | skipping: [192.168.164.8]
+2023-10-09 13:22:16,680 p=6204 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:22:16,685 p=6204 u=flores n=ansible | TASK [install updates (Ubuntu) update_cache=True] ******************************
+2023-10-09 13:22:16,749 p=6204 u=flores n=ansible | skipping: [192.168.164.10]
+2023-10-09 13:22:26,573 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:22:31,132 p=6204 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:22:31,163 p=6204 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-09 13:22:31,168 p=6204 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:22:32,738 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:22:32,974 p=6204 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:22:45,786 p=6204 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:22:45,817 p=6204 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 13:22:45,833 p=6204 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:22:47,274 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:22:47,287 p=6204 u=flores n=ansible | TASK [workstations : install unzip name=unzip] *********************************
+2023-10-09 13:22:49,447 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:22:49,454 p=6204 u=flores n=ansible | TASK [workstations : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 13:23:36,251 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:23:36,274 p=6204 u=flores n=ansible | PLAY [web_servers] *************************************************************
+2023-10-09 13:23:36,289 p=6204 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:23:40,830 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:23:53,427 p=6204 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:23:53,436 p=6204 u=flores n=ansible | TASK [web_servers : install unzip name=unzip] **********************************
+2023-10-09 13:23:55,743 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:23:56,526 p=6204 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:23:56,533 p=6204 u=flores n=ansible | TASK [web_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 13:24:16,415 p=6204 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:28:12,762 p=6204 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-09 13:28:18,221 p=6454 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-09 13:28:18,232 p=6454 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:28:20,361 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:28:20,521 p=6454 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:28:35,961 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:28:35,966 p=6454 u=flores n=ansible | TASK [update repository index (CentOS) update_cache=True] **********************
+2023-10-09 13:28:35,990 p=6454 u=flores n=ansible | skipping: [192.168.164.6]
+2023-10-09 13:28:36,011 p=6454 u=flores n=ansible | skipping: [192.168.164.8]
+2023-10-09 13:28:40,603 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:28:40,609 p=6454 u=flores n=ansible | TASK [install updates (Ubuntu) update_cache=True] ******************************
+2023-10-09 13:28:40,667 p=6454 u=flores n=ansible | skipping: [192.168.164.10]
+2023-10-09 13:28:44,352 p=6454 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:28:44,583 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:28:44,609 p=6454 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-09 13:28:44,615 p=6454 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:28:46,294 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:28:46,323 p=6454 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:28:47,261 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:28:47,313 p=6454 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-09 13:28:47,319 p=6454 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:28:48,705 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:28:48,723 p=6454 u=flores n=ansible | TASK [workstations : install unzip name=unzip] *********************************
+2023-10-09 13:28:50,721 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:28:50,730 p=6454 u=flores n=ansible | TASK [workstations : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 13:29:39,002 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:29:39,019 p=6454 u=flores n=ansible | PLAY [web_servers] *************************************************************
+2023-10-09 13:29:39,038 p=6454 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:29:40,595 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:29:41,465 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:29:41,475 p=6454 u=flores n=ansible | TASK [web_servers : install unzip name=unzip] **********************************
+2023-10-09 13:29:43,668 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:29:43,720 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:29:43,728 p=6454 u=flores n=ansible | TASK [web_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 13:29:57,495 p=6454 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-09 13:30:24,580 p=6454 u=flores n=ansible | >f++++++.?? terraform
+
+2023-10-09 13:30:24,581 p=6454 u=flores n=ansible | changed: [192.168.164.10]
+2023-10-09 13:30:24,631 p=6454 u=flores n=ansible | PLAY [db_servers] **************************************************************
+2023-10-09 13:30:24,638 p=6454 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-09 13:30:26,313 p=6454 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:30:41,961 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:30:41,973 p=6454 u=flores n=ansible | TASK [db_servers : install unzip name=unzip] ***********************************
+2023-10-09 13:30:44,329 p=6454 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-09 13:30:44,872 p=6454 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-09 13:30:44,877 p=6454 u=flores n=ansible | TASK [db_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-09 13:30:59,157 p=6454 u=flores n=ansible | >f++++++.?? terraform
+
+2023-10-09 13:30:59,158 p=6454 u=flores n=ansible | changed: [192.168.164.8]
+2023-10-10 16:34:13,909 p=2554 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-10 16:34:13,944 p=2554 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:34:26,520 p=2554 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:34:26,535 p=2554 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:34:34,087 p=2554 u=flores n=ansible | fatal: [192.168.164.10]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.164.10 port 22: Connection timed out", "unreachable": true}
+2023-10-10 16:34:34,093 p=2554 u=flores n=ansible | TASK [update repository index (CentOS) update_cache=True] **********************
+2023-10-10 16:34:34,106 p=2554 u=flores n=ansible | skipping: [192.168.164.6]
+2023-10-10 16:34:34,113 p=2554 u=flores n=ansible | skipping: [192.168.164.8]
+2023-10-10 16:34:34,122 p=2554 u=flores n=ansible | TASK [install updates (Ubuntu) update_cache=True] ******************************
+2023-10-10 16:34:40,121 p=2554 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:34:40,147 p=2554 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:34:40,170 p=2554 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-10 16:34:40,178 p=2554 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:34:41,977 p=2554 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:34:42,241 p=2554 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:34:42,283 p=2554 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-10 16:34:42,289 p=2554 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:34:44,153 p=2554 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:34:44,166 p=2554 u=flores n=ansible | TASK [workstations : install unzip name=unzip] *********************************
+2023-10-10 16:34:46,516 p=2554 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:34:46,522 p=2554 u=flores n=ansible | TASK [workstations : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:34:47,609 p=2554 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-10 16:36:03,526 p=2797 u=flores n=ansible | 192.168.164.8 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-10 16:36:03,616 p=2797 u=flores n=ansible | 192.168.164.6 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-10 16:36:04,323 p=2797 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-10 16:36:09,919 p=2834 u=flores n=ansible | 192.168.164.8 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-10 16:36:09,960 p=2834 u=flores n=ansible | 192.168.164.6 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-10 16:36:11,354 p=2834 u=flores n=ansible | 192.168.164.10 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-10 16:41:27,725 p=3030 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-10 16:41:27,737 p=3030 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:41:29,921 p=3030 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:41:32,488 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:41:47,320 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:41:47,328 p=3030 u=flores n=ansible | TASK [update repository index (CentOS) update_cache=True] **********************
+2023-10-10 16:41:47,342 p=3030 u=flores n=ansible | skipping: [192.168.164.6]
+2023-10-10 16:41:47,360 p=3030 u=flores n=ansible | skipping: [192.168.164.8]
+2023-10-10 16:41:58,847 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:41:58,853 p=3030 u=flores n=ansible | TASK [install updates (Ubuntu) update_cache=True] ******************************
+2023-10-10 16:41:58,903 p=3030 u=flores n=ansible | skipping: [192.168.164.10]
+2023-10-10 16:42:02,902 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:11,215 p=3030 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:42:11,235 p=3030 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-10 16:42:11,241 p=3030 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:42:12,823 p=3030 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:42:12,890 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:28,601 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:42:28,640 p=3030 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-10 16:42:28,649 p=3030 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:42:30,188 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:30,201 p=3030 u=flores n=ansible | TASK [workstations : install unzip name=unzip] *********************************
+2023-10-10 16:42:32,127 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:32,134 p=3030 u=flores n=ansible | TASK [workstations : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:42:43,135 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:43,157 p=3030 u=flores n=ansible | PLAY [web_servers] *************************************************************
+2023-10-10 16:42:43,168 p=3030 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:42:44,697 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:46,789 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:42:46,800 p=3030 u=flores n=ansible | TASK [web_servers : install unzip name=unzip] **********************************
+2023-10-10 16:42:49,018 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:42:49,381 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:42:49,385 p=3030 u=flores n=ansible | TASK [web_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:43:03,857 p=3030 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:43:18,298 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:43:18,328 p=3030 u=flores n=ansible | PLAY [db_servers] **************************************************************
+2023-10-10 16:43:18,334 p=3030 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:43:19,823 p=3030 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:43:36,088 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:43:36,106 p=3030 u=flores n=ansible | TASK [db_servers : install unzip name=unzip] ***********************************
+2023-10-10 16:43:38,530 p=3030 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:43:39,035 p=3030 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:43:39,041 p=3030 u=flores n=ansible | TASK [db_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:43:53,061 p=3030 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:51:22,226 p=3030 u=flores n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-10 16:53:21,514 p=3396 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-10 16:53:21,527 p=3396 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:53:23,541 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:53:23,819 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:53:45,645 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:53:45,655 p=3396 u=flores n=ansible | TASK [update repository index (CentOS) update_cache=True] **********************
+2023-10-10 16:53:45,689 p=3396 u=flores n=ansible | skipping: [192.168.164.6]
+2023-10-10 16:53:45,698 p=3396 u=flores n=ansible | skipping: [192.168.164.8]
+2023-10-10 16:53:51,612 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:53:51,622 p=3396 u=flores n=ansible | TASK [install updates (Ubuntu) update_cache=True] ******************************
+2023-10-10 16:53:51,673 p=3396 u=flores n=ansible | skipping: [192.168.164.10]
+2023-10-10 16:53:55,242 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:53:55,278 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:53:55,297 p=3396 u=flores n=ansible | PLAY [all] *********************************************************************
+2023-10-10 16:53:55,308 p=3396 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:53:56,750 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:53:56,901 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:07,856 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:54:07,891 p=3396 u=flores n=ansible | PLAY [workstations] ************************************************************
+2023-10-10 16:54:07,900 p=3396 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:54:09,420 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:09,432 p=3396 u=flores n=ansible | TASK [workstations : install unzip name=unzip] *********************************
+2023-10-10 16:54:11,348 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:11,355 p=3396 u=flores n=ansible | TASK [workstations : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:54:26,018 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:26,038 p=3396 u=flores n=ansible | PLAY [web_servers] *************************************************************
+2023-10-10 16:54:26,052 p=3396 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:54:27,508 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:28,272 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:54:28,285 p=3396 u=flores n=ansible | TASK [web_servers : install unzip name=unzip] **********************************
+2023-10-10 16:54:30,454 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:54:30,457 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:30,463 p=3396 u=flores n=ansible | TASK [web_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:54:44,402 p=3396 u=flores n=ansible | ok: [192.168.164.6]
+2023-10-10 16:54:51,581 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:54:51,600 p=3396 u=flores n=ansible | PLAY [db_servers] **************************************************************
+2023-10-10 16:54:51,609 p=3396 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:54:53,156 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:55:08,973 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:55:08,988 p=3396 u=flores n=ansible | TASK [db_servers : install unzip name=unzip] ***********************************
+2023-10-10 16:55:11,540 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:56:12,549 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:56:12,557 p=3396 u=flores n=ansible | TASK [db_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:56:26,682 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:56:35,326 p=3396 u=flores n=ansible | ok: [192.168.164.10]
+2023-10-10 16:56:35,355 p=3396 u=flores n=ansible | PLAY [file_servers] ************************************************************
+2023-10-10 16:56:35,364 p=3396 u=flores n=ansible | TASK [Gathering Facts gather_subset=['!hardware', '!facter', '!ohai'], gather_timeout=10] ***
+2023-10-10 16:56:36,692 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:56:36,704 p=3396 u=flores n=ansible | TASK [file_servers : install unzip name=unzip] *********************************
+2023-10-10 16:56:38,636 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:56:38,642 p=3396 u=flores n=ansible | TASK [file_servers : install terraform src=https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip, dest=/usr/local/bin, remote_src=True, mode=493, owner=root, group=root] ***
+2023-10-10 16:56:54,548 p=3396 u=flores n=ansible | ok: [192.168.164.8]
+2023-10-10 16:56:54,564 p=3396 u=flores n=ansible | PLAY RECAP *********************************************************************
+2023-10-10 16:56:54,565 p=3396 u=flores n=ansible | 192.168.164.10             : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-10-10 16:56:54,565 p=3396 u=flores n=ansible | 192.168.164.6              : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-10-10 16:56:54,565 p=3396 u=flores n=ansible | 192.168.164.8              : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
